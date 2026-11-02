@@ -1,0 +1,214 @@
+/* ============================================================
+   玄武商城设计系统 —— 统一配色、间距、圆角、阴影与 Element Plus 主题
+   ============================================================ */
+
+:root {
+  /* 品牌色（现代靛蓝） */
+  --brand: #2563eb;
+  --brand-light: #3b82f6;
+  --brand-lighter: #eff6ff;
+  --brand-dark: #1d4ed8;
+
+  /* 语义色 */
+  --price: #ef4444;
+  --success: #16a34a;
+  --warning: #d97706;
+
+  /* 中性色 */
+  --bg: #f6f7f9;
+  --card: #ffffff;
+  --text-1: #1f2937;
+  --text-2: #6b7280;
+  --text-3: #9ca3af;
+  --border: #eef0f3;
+
+  /* 圆角 */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+
+  /* 阴影 */
+  --shadow-sm: 0 1px 2px rgba(17, 24, 39, 0.04);
+  --shadow-md: 0 4px 14px rgba(17, 24, 39, 0.07);
+  --shadow-lg: 0 10px 30px rgba(17, 24, 39, 0.10);
+
+  /* 间距 */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+
+  /* Element Plus 主题覆盖 */
+  --el-color-primary: var(--brand);
+  --el-color-primary-light-3: #6a9cf5;
+  --el-color-primary-light-5: #9bbcf9;
+  --el-color-primary-light-7: #c5d7fb;
+  --el-color-primary-light-8: #dae5fd;
+  --el-color-primary-light-9: #eff4fe;
+  --el-color-primary-dark-2: var(--brand-dark);
+  --el-color-danger: var(--price);
+  --el-border-radius-base: var(--radius-md);
+  --el-border-radius-small: var(--radius-sm);
+  --el-text-color-primary: var(--text-1);
+  --el-text-color-regular: var(--text-2);
+  --el-border-color: var(--border);
+  --el-border-color-light: var(--border);
+  --el-fill-color-blank: var(--card);
+}
+
+/* ---------- 全局基础 ---------- */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-1);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* ---------- 通用工具类 ---------- */
+.page-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 var(--sp-5);
+  letter-spacing: -0.01em;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: var(--sp-6) 0 var(--sp-4);
+}
+
+.text-price {
+  color: var(--price);
+  font-weight: 600;
+}
+
+/* ---------- 卡片 ---------- */
+.el-card {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.el-card.is-always-shadow,
+.el-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* ---------- 商品卡片通用 ---------- */
+.goods-card {
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.goods-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.goods-card .cover {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background: #f0f2f5;
+  transition: transform 0.3s ease;
+}
+
+.goods-card:hover .cover {
+  transform: scale(1.04);
+}
+
+.goods-card .g-name {
+  font-size: 14px;
+  color: var(--text-1);
+  line-height: 1.4;
+  height: 40px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.goods-card .g-price {
+  color: var(--price);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.goods-card .g-sales {
+  color: var(--text-3);
+  font-size: 12px;
+}
+
+/* ---------- 顶部导航 ---------- */
+.app-header {
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+}
+
+.app-header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-5);
+  height: 62px;
+  padding: 0 var(--sp-5);
+}
+
+.app-logo {
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--brand);
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+/* ---------- 按钮 ---------- */
+.el-button {
+  font-weight: 500;
+}
+
+.el-button--primary {
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25);
+}
+
+/* ---------- 表格 ---------- */
+.el-table th.el-table__cell {
+  background: #fafbfc;
+  color: var(--text-2);
+  font-weight: 500;
+}
+
+/* ---------- 分页居中 ---------- */
+.pager {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--sp-5);
+}
+
+/* ---------- 响应式断点 ---------- */
+@media (max-width: 1024px) {
+  .app-header-inner { padding: 0 var(--sp-4); }
+  .main-container { padding: var(--sp-4); }
+}
+
+@media (max-width: 768px) {
+  .app-header-inner { gap: var(--sp-3); height: 56px; }
+  .app-logo { font-size: 18px; }
+  .main-container { padding: var(--sp-3); }
+}

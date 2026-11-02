@@ -1,0 +1,14 @@
+fastapi>=0.115,<0.116
+uvicorn[standard]>=0.32,<0.35
+SQLAlchemy>=2.0,<2.1
+alembic>=1.13,<2
+pydantic>=2.9,<3
+pydantic-settings>=2.5,<3
+PyJWT>=2.9,<3
+bcrypt>=4.1,<5
+email-validator>=2.1,<3
+psycopg[binary]>=3.2,<4
+python-multipart>=0.0.9,<0.1
+# 智能客服：LangGraph 编排 + OpenAI 兼容 HTTP 调用
+langgraph>=0.2,<0.4
+httpx>=0.27,<0.29
