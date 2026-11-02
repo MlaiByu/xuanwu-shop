@@ -4,6 +4,16 @@
 
 > 范围边界见 `docs/PRD.md`：**做** 商品浏览/搜索、SPU+SKU 多规格、购物车、下单（模拟支付）、订单管理、收货地址、超时自动取消/自动确认、后台商品/分类/订单管理、图片上传、JWT 鉴权。**不做** 真实支付、退款售后、优惠券、评价、物流轨迹、多商家、推荐算法等。
 
+## 页面预览
+
+| 首页 | 商品详情 |
+|---|---|
+| ![首页](docs/screenshots/01-home.png) | ![商品详情](docs/screenshots/03-product-detail.png) |
+| **商品列表** | **购物车** |
+| ![商品列表](docs/screenshots/02-products.png) | ![购物车](docs/screenshots/04-cart.png) |
+
+更多截图见 `docs/screenshots/`。
+
 ---
 
 ## 一、功能与角色
